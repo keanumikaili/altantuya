@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Quill - Modern Blog</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Setting the default font to Inter, as required */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1e293b',
+                        'secondary-dark': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'text-light': '#f8fafc',
+                        'subtle-gray': '#94a3b8',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-text-light antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-primary-dark shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#" class="text-3xl font-bold tracking-tight text-accent-blue hover:text-blue-400 transition duration-300">
+                The Digital Quill
+            </a>
+
+            <!-- Navigation Links (Hidden on small screens, shown as menu button) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-subtle-gray hover:text-text-light transition duration-150 font-medium">Home</a>
+                <a href="#" class="text-subtle-gray hover:text-text-light transition duration-150 font-medium">Categories</a>
+                <a href="#" class="text-subtle-gray hover:text-text-light transition duration-150 font-medium">About</a>
+                <a href="#" class="px-4 py-2 bg-accent-blue text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-150">Subscribe</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Icon only) -->
+            <button class="md:hidden text-subtle-gray hover:text-text-light p-2 rounded-lg transition duration-150" aria-label="Open Menu">
+                <!-- Lucide Icon: Menu -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+            <!-- Primary Content Column (Posts) -->
+            <section class="lg:col-span-2">
+
+                <!-- Featured Post Section -->
+                <h2 class="text-2xl font-bold mb-6 border-b border-secondary-dark pb-3">Featured Article</h2>
+                <article class="bg-secondary-dark p-6 rounded-xl shadow-xl mb-10 transform hover:scale-[1.01] transition duration-300">
+                    <div class="md:flex md:space-x-8">
+                        <!-- Image Placeholder -->
+                        <div class="w-full md:w-1/2 h-64 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center mb-4 md:mb-0">
+                            <span class="text-sm text-subtle-gray">Image Placeholder: AI & Future</span>
+                        </div>
+                        <!-- Content -->
+                        <div class="w-full md:w-1/2">
+                            <span class="text-accent-blue text-sm font-semibold uppercase">Technology & Futurism</span>
+                            <h3 class="text-4xl font-extrabold mt-2 mb-4 leading-tight">
+                                The Singularity is Near: Decoding the Next Decade of AI Innovation
+                            </h3>
+                            <p class="text-subtle-gray mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                            </p>
+                            <a href="#" class="inline-flex items-center text-accent-blue hover:text-blue-400 font-semibold transition duration-150">
+                                Read Full Story
+                                <!-- Lucide Icon: Arrow Right -->
+                                <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </a>
+                            <p class="mt-4 text-xs text-subtle-gray">By Jane Doe | September 28, 2025</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- End Featured Post -->
+
+                <!-- Recent Posts Grid -->
+                <h2 class="text-2xl font-bold mb-6 border-b border-secondary-dark pb-3 mt-12">Recent Articles</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Post Card 1 -->
+                    <div class="bg-secondary-dark p-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:translate-y-[-2px] transition duration-200 group">
+                        <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-sm text-subtle-gray">Code Snippet Demo</span>
+                        </div>
+                        <span class="text-green-400 text-xs font-semibold uppercase">Coding</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2 group-hover:text-accent-blue transition duration-200">
+                            Mastering Async/Await in JavaScript for Clean Code
+                        </h4>
+                        <p class="text-sm text-subtle-gray line-clamp-2">
+                            A deep dive into promises, callbacks, and how modern async/await syntax can drastically improve readability and error handling.
+                        </p>
+                        <p class="mt-3 text-xs text-subtle-gray">October 12, 2025</p>
+                    </div>
+
+                    <!-- Post Card 2 -->
+                    <div class="bg-secondary-dark p-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:translate-y-[-2px] transition duration-200 group">
+                        <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-sm text-subtle-gray">Financial Chart Mock</span>
+                        </div>
+                        <span class="text-yellow-400 text-xs font-semibold uppercase">Finance</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2 group-hover:text-accent-blue transition duration-200">
+                            The Psychology of Saving: Behavioral Finance Explained
+                        </h4>
+                        <p class="text-sm text-subtle-gray line-clamp-2">
+                            Understanding why we spend too much and save too little, and practical tips to align your habits with your financial goals.
+                        </p>
+                        <p class="mt-3 text-xs text-subtle-gray">September 30, 2025</p>
+                    </div>
+
+                    <!-- Post Card 3 -->
+                    <div class="bg-secondary-dark p-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:translate-y-[-2px] transition duration-200 group">
+                        <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-sm text-subtle-gray">Travel Photo Mock</span>
+                        </div>
+                        <span class="text-pink-400 text-xs font-semibold uppercase">Travel</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2 group-hover:text-accent-blue transition duration-200">
+                            10 Underrated European Cities You Must Visit This Fall
+                        </h4>
+                        <p class="text-sm text-subtle-gray line-clamp-2">
+                            Move beyond Paris and Rome. Discover the hidden gems of Central and Eastern Europe for a unique travel experience.
+                        </p>
+                        <p class="mt-3 text-xs text-subtle-gray">September 15, 2025</p>
+                    </div>
+
+                    <!-- Post Card 4 -->
+                    <div class="bg-secondary-dark p-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:translate-y-[-2px] transition duration-200 group">
+                        <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-sm text-subtle-gray">Design Mockup</span>
+                        </div>
+                        <span class="text-purple-400 text-xs font-semibold uppercase">Design</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2 group-hover:text-accent-blue transition duration-200">
+                            The Power of Negative Space in Modern UI Design
+                        </h4>
+                        <p class="text-sm text-subtle-gray line-clamp-2">
+                            How proper use of whitespace (negative space) can significantly enhance user focus and overall aesthetic appeal.
+                        </p>
+                        <p class="mt-3 text-xs text-subtle-gray">August 28, 2025</p>
+                    </div>
+
+                </div>
+                <!-- End Recent Posts Grid -->
+
+                <div class="mt-12 text-center">
+                    <button class="px-8 py-3 bg-gray-700 text-text-light rounded-lg font-semibold hover:bg-gray-600 transition duration-150 shadow-md">
+                        Load More Articles
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sidebar Column -->
+            <aside class="lg:col-span-1 space-y-10 pt-12 lg:pt-0">
+
+                <!-- Search Widget -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-bold mb-4">Search Blog</h3>
+                    <div class="flex">
+                        <input type="search" placeholder="Enter keywords..." class="flex-grow p-3 rounded-l-lg bg-primary-dark border-r-0 border border-gray-700 focus:outline-none focus:border-accent-blue text-sm">
+                        <button class="bg-accent-blue text-white p-3 rounded-r-lg hover:bg-blue-700 transition duration-150">
+                            <!-- Lucide Icon: Search -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-bold mb-4">Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-subtle-gray hover:text-accent-blue transition duration-150 flex justify-between items-center">Technology <span class="text-xs bg-primary-dark px-2 py-0.5 rounded-full">14</span></a></li>
+                        <li><a href="#" class="text-subtle-gray hover:text-accent-blue transition duration-150 flex justify-between items-center">Finance <span class="text-xs bg-primary-dark px-2 py-0.5 rounded-full">9</span></a></li>
+                        <li><a href="#" class="text-subtle-gray hover:text-accent-blue transition duration-150 flex justify-between items-center">Productivity <span class="text-xs bg-primary-dark px-2 py-0.5 rounded-full">21</span></a></li>
+                        <li><a href="#" class="text-subtle-gray hover:text-accent-blue transition duration-150 flex justify-between items-center">Design <span class="text-xs bg-primary-dark px-2 py-0.5 rounded-full">5</span></a></li>
+                        <li><a href="#" class="text-subtle-gray hover:text-accent-blue transition duration-150 flex justify-between items-center">Travel <span class="text-xs bg-primary-dark px-2 py-0.5 rounded-full">11</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="bg-accent-blue p-6 rounded-xl shadow-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Never Miss a Post!</h3>
+                    <p class="text-sm text-blue-100 mb-4">Join our newsletter for weekly insights delivered straight to your inbox.</p>
+                    <input type="email" placeholder="Your Email Address" class="w-full p-3 rounded-lg text-gray-900 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-800">
+                    <button class="w-full py-3 bg-primary-dark text-white rounded-lg font-semibold hover:bg-gray-800 transition duration-150">
+                        Sign Me Up
+                    </button>
+                </div>
+
+            </aside>
+            <!-- End Sidebar Column -->
+
+        </div>
+    </main>
+    <!-- End Main Content Area -->
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-subtle-gray text-sm">
+            <p>&copy; 2025 The Digital Quill. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-accent-blue transition duration-150">Privacy Policy</a>
+                <a href="#" class="hover:text-accent-blue transition duration-150">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+</html>
